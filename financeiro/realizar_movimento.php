@@ -1,4 +1,6 @@
 <?php
+require_once '../DAO/UtilDAO.php';
+UtilDAO::VerificarLogado();
 require_once '../DAO/MovimentoDAO.php';
 require_once '../DAO/CategoriaDAO.php';
 require_once '../DAO/EmpresaDAO.php';
@@ -17,7 +19,7 @@ $empresas = $emp->ConsultarEmpresa();
 $contas = $con->ConsultarConta();
 
 //Ação de clique no botão de Finalizar
-if(isset($_POST['btnGravar'])){
+if (isset($_POST['btnGravar'])) {
     //Pegar os dados do usuario
     $tipo = $_POST['tipo'];
     $data = $_POST['data'];
@@ -29,8 +31,6 @@ if(isset($_POST['btnGravar'])){
 
     //mandar os dados para o método
     $ret = $objDAO->RealizarMovimento($tipo, $data, $valor, $categoria, $empresa, $conta, $obs);
-
-
 }
 
 
@@ -97,8 +97,8 @@ include_once '_head.php';
                             <label>Empresa*</label>
                             <select class="form-control" name="empresa" id="empresa">
                                 <option value="">Selecione</option>
-                                <?php foreach($empresas as $item) { ?>
-                                <option value="<?=  $item['id_empresa']?>"><?= $item['nome_empresa'] ?></option>    
+                                <?php foreach ($empresas as $item) { ?>
+                                    <option value="<?= $item['id_empresa'] ?>"><?= $item['nome_empresa'] ?></option>
                                 <?php } ?>
                             </select>
                         </div>
@@ -106,8 +106,8 @@ include_once '_head.php';
                             <label>Conta*</label>
                             <select class="form-control" name="conta" id="conta">
                                 <option value="">Selecione</option>
-                                <?php foreach($contas as $item) { ?>
-                                <option value="<?= $item['id_conta'] ?>"><?= $item['banco_conta'] . ' - Ag. ' . $item['agencia_conta'] . '  - Núm. conta: ' . $item['numero_conta'] . ' - Saldo: R$ ' . $item['saldo_conta'] ?></option>
+                                <?php foreach ($contas as $item) { ?>
+                                    <option value="<?= $item['id_conta'] ?>"><?= $item['banco_conta'] . ' - Ag. ' . $item['agencia_conta'] . '  - Núm. conta: ' . $item['numero_conta'] . ' - Saldo: R$ ' . $item['saldo_conta'] ?></option>
                                 <?php } ?>
                             </select>
                         </div>

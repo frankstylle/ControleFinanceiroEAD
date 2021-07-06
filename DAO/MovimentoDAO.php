@@ -119,19 +119,21 @@ class MovimentoDAO extends Conexao
 
     public function ExcluirMovimento($idMovimento, $idConta, $valor, $tipo)
     {
-        if ($idMovimento = '' || $idConta == '' || $valor == '' || $tipo == '') {
+        if ($idMovimento == '' || $idConta == '' || $valor == '' || $tipo == '') {
             return 0;
         }
 
         $conexao = parent::retornarConexao();
 
-        $comando_sql = 'DELETE FROM tb_movimento where id_movimento = ?';
+        $comando_sql = 'DELETE FROM tb_movimento where id_movimento = ?
+                                                   and id_usuario = ? ';
 
         $sql = new PDOStatement();
 
         $sql = $conexao->prepare($comando_sql);
 
         $sql->bindValue(1, $idMovimento);
+        $sql->bindValue(2, UtilDAO::UsuarioLogado());
 
         $conexao->BeginTransaction();
 
