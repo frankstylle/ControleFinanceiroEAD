@@ -67,7 +67,7 @@ include_once '_head.php';
                     <div class="form-group" id="divCategoria">
                         <input type="hidden" name="cod" value="<?= $dados[0]['id_categoria'] ?>">
                         <label>Nome da categoria</label>
-                        <input class="form-control" placeholder="Digite o nome da categoria. Exemplo: alimentação" id="categoria" name="nomeCategoria" value="<?= $dados[0]['nome_categoria'] ?>" />
+                        <input class="form-control" placeholder="Digite o nome da categoria. Exemplo: alimentação" id="categoria" name="nomeCategoria" value="<?= $dados[0]['nome_categoria'] ?>" maxlength="35" />
                     </div>
                     <button type="submit" class="btn btn-success" name="btnSalvar" onclick="return ValidarCategoria()">Salvar</button>
                     <button type="button" data-toggle="modal" data-target="#modalExcluir" class="btn btn-danger" >Excluir</button>

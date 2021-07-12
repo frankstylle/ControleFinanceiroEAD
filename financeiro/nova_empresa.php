@@ -46,15 +46,15 @@ include_once '_head.php';
                 <form action="nova_empresa.php" method="post">
                     <div class="form-group" id="divNomeEmpresa">
                         <label>Nome da empresa*</label>
-                        <input class="form-control" placeholder="Digite o nome da empresa. Exemplo: Conta de luz" name="nomeEmpresa" id="nomeEmpresa" />
+                        <input class="form-control" placeholder="Digite o nome da empresa. Exemplo: Conta de luz" name="nomeEmpresa" id="nomeEmpresa" maxlength="50" />
                     </div>
                     <div class="form-group">
                         <label>Telefone</label>
-                        <input class="form-control" placeholder="Digite o telefone da empresa." name="telefone" />
+                        <input class="form-control" placeholder="Digite o telefone da empresa." name="telefone" maxlength="11" />
                     </div>
                     <div class="form-group">
                         <label>Endereço</label>
-                        <input class="form-control" placeholder="Digite o endereço da empresa." name="endereco" />
+                        <input class="form-control" placeholder="Digite o endereço da empresa." name="endereco" maxlength="100" />
                     </div>
                     <button type="submit" class="btn btn-success" name="btnGravar" onclick="return ValidarEmpresa()">Gravar</button>
                 </form>

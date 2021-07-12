@@ -45,7 +45,8 @@ class ContaDAO extends Conexao
                                numero_conta,
                                saldo_conta
                           FROM tb_conta
-                         WHERE id_usuario = ?';
+                         WHERE id_usuario = ?
+                      ORDER BY banco_conta ASC';
         $sql = new PDOStatement();
         $sql = $conexao->prepare($comando_sql);
 

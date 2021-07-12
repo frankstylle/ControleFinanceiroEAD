@@ -40,7 +40,7 @@ include_once '_head.php';
                 <form action="nova_categoria.php" method="post">
                     <div class="form-group" id="divCategoria">
                         <label>Nome da categoria</label>
-                        <input class="form-control" placeholder="Digite o nome da categoria. Exemplo: alimentação" name="nomeCategoria" id="categoria" />
+                        <input class="form-control" placeholder="Digite o nome da categoria. Exemplo: alimentação" name="nomeCategoria" id="categoria" maxlength="35" />
                     </div>
                     <button type="submit" class="btn btn-success" name="btnGravar" onclick="return ValidarCategoria()">Gravar</button>
                 </form>

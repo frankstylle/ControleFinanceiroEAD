@@ -169,4 +169,81 @@ class MovimentoDAO extends Conexao
             return -1;
         }
     }
+
+    public function TotalEntrada() {
+        $conexao = parent::retornarConexao();
+
+        $comando_sql = 'SELECT SUM(valor_movimento) as total 
+                          FROM tb_movimento
+                         WHERE tipo_movimento = 1
+                           AND id_usuario = ?';
+
+        $sql =  new PDOStatement();
+        $sql = $conexao->prepare($comando_sql);
+
+        $sql->bindValue(1, UtilDAO::UsuarioLogado());
+
+        $sql->setFetchMode(PDO::FETCH_ASSOC);
+
+        $sql->execute();
+
+        return $sql->fetchAll();
+    }
+
+    public function TotalSaida() {
+        $conexao = parent::retornarConexao();
+
+        $comando_sql = 'SELECT SUM(valor_movimento) as total 
+                          FROM tb_movimento
+                         WHERE tipo_movimento = 2
+                           AND id_usuario = ?';
+
+        $sql =  new PDOStatement();
+        $sql = $conexao->prepare($comando_sql);
+
+        $sql->bindValue(1, UtilDAO::UsuarioLogado());
+
+        $sql->setFetchMode(PDO::FETCH_ASSOC);
+
+        $sql->execute();
+
+        return $sql->fetchAll();
+    }
+
+    public function MostrarUltimosLancamentos()
+    {
+        $conexao = parent::retornarConexao();
+                                
+        $comando_sql = " SELECT id_movimento,
+                                tipo_movimento,
+                                tb_movimento.id_conta,
+                                DATE_FORMAT(data_movimento,'%d/%m/%Y') as data_movimento,
+                                valor_movimento,
+                                nome_categoria,
+                                nome_empresa,
+                                banco_conta,
+                                numero_conta,
+                                agencia_conta,
+                                obs_movimento
+                          FROM  tb_movimento
+                    INNER JOIN  tb_categoria
+                            ON  tb_categoria.id_categoria = tb_movimento.id_categoria
+                    INNER JOIN  tb_empresa
+                            ON  tb_empresa.id_empresa = tb_movimento.id_empresa 
+                    INNER JOIN  tb_conta
+                            ON  tb_conta.id_conta = tb_movimento.id_conta 
+                         WHERE  tb_movimento.id_usuario = ?
+                      ORDER BY tb_movimento.id_movimento DESC LIMIT 10";
+
+        $sql = new PDOStatement();
+        $sql = $conexao->prepare($comando_sql);
+        
+        $sql->bindValue(1, UtilDAO::UsuarioLogado());
+
+        $sql->setFetchMode(PDO::FETCH_ASSOC);
+
+        $sql->execute();
+
+        return $sql->fetchAll();
+    }
 }

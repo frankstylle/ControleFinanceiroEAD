@@ -40,7 +40,8 @@ class CategoriaDAO  extends Conexao
         $comando_sql = 'SELECT id_categoria,
                                nome_categoria
                           FROM tb_categoria
-                         WHERE id_usuario = ?';
+                         WHERE id_usuario = ?
+                      ORDER BY nome_categoria ASC';
 
         $sql = new PDOStatement();
         $sql = $conexao->prepare($comando_sql);

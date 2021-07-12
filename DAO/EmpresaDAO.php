@@ -43,7 +43,8 @@ class EmpresaDAO extends Conexao{
                                endereco_empresa,
                                id_empresa
                           FROM tb_empresa
-                         WHERE id_usuario = ?';
+                         WHERE id_usuario = ?
+                         ORDER BY nome_empresa ASC';
         $sql = new PDOStatement();
         $sql = $conexao->prepare($comando_sql);
 

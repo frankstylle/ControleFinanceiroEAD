@@ -95,7 +95,7 @@ class UsuarioDAO extends Conexao{
         $nome = $user[0]['nome_usuario'];
 
         UtilDAO::CriarSessao($cod, $nome);
-        header('location: meus_dados.php?');
+        header('location: inicial.php?');
         exit;
 
     }

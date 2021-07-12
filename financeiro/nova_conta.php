@@ -45,19 +45,19 @@ include_once '_head.php';
                 <form action="nova_conta.php" method="post">
                     <div class="form-group" id="divBanco">
                         <label>Nome do Banco*</label>
-                        <input class="form-control" placeholder="Digite o nome do banco..." name="banco" id="banco" />
+                        <input class="form-control" placeholder="Digite o nome do banco..." name="banco" id="banco" maxlength="20" />
                     </div>
                     <div class="form-group" id="divAgencia">
                         <label>Agência*</label>
-                        <input class="form-control" placeholder="Digite a agência..." name="agencia" id="agencia" />
+                        <input class="form-control" placeholder="Digite a agência..." name="agencia" id="agencia" maxlength="8" />
                     </div>
                     <div class="form-group" id="divNumero">
                         <label>Número da conta*</label>
-                        <input class="form-control" placeholder="Digite o número da conta..." name="numero" id="numero" />
+                        <input class="form-control" placeholder="Digite o número da conta..." name="numero" id="numero" maxlength="12" />
                     </div>
                     <div class="form-group" id="divSaldo">
                         <label>Saldo*</label>
-                        <input class="form-control" placeholder="Digite o saldo da conta..." name="saldo" id="saldo" />
+                        <input class="form-control" placeholder="Digite o saldo da conta..." name="saldo" id="saldo" maxlength="10" />
                     </div>
                     <button type="submit" class="btn btn-success" name="btnGravar" onclick="return ValidarConta()">Gravar</button>
                 </form>

@@ -64,15 +64,15 @@ include_once '_head.php';
                     <div class="form-group" id="divNomeEmpresa">
                         <input type="hidden" name="cod" value="<?= $empresas[0]['id_empresa'] ?>">
                         <label>Nome da empresa*</label>
-                        <input class="form-control" placeholder="Digite o nome da empresa. Exemplo: Conta de luz" id="nomeEmpresa" name="nomeEmpresa" value="<?= $empresas[0]['nome_empresa'] ?>" />
+                        <input class="form-control" placeholder="Digite o nome da empresa. Exemplo: Conta de luz" id="nomeEmpresa" name="nomeEmpresa" value="<?= $empresas[0]['nome_empresa'] ?>" maxlength="50" />
                     </div>
                     <div class="form-group">
                         <label>Telefone</label>
-                        <input class="form-control" placeholder="Digite o telefone da empresa." name="tel" value="<?= ($empresas[0]['telefone_empresa']) ?>" />
+                        <input class="form-control" placeholder="Digite o telefone da empresa." name="tel" value="<?= ($empresas[0]['telefone_empresa']) ?>" maxlength="11" />
                     </div>
                     <div class="form-group">
                         <label>Endereço</label>
-                        <input class="form-control" placeholder="Digite o endereço da empresa." name="endereco" value="<?= $empresas[0]['endereco_empresa'] ?>" />
+                        <input class="form-control" placeholder="Digite o endereço da empresa." name="endereco" value="<?= $empresas[0]['endereco_empresa'] ?>" maxlength="100" />
                     </div>
                     <button type="submit" class="btn btn-success" onclick="ValidarEmpresa()" name="btnSalvar">Salvar</button>
                     <button type="button" data-toggle="modal" data-target="#modalExcluir" class="btn btn-danger">Excluir</button>
