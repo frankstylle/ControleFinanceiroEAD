@@ -58,7 +58,6 @@ include_once '_head.php';
                     <div class="col-md-12">
                         <h2>Alterar Categoria</h2>
                         <h5>Aqui você poderá alterar ou excluir suas categorias. </h5>
-
                     </div>
                 </div>
                 <!-- /. ROW  -->

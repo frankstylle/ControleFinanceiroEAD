@@ -7,7 +7,6 @@ $objDAO = new ContaDAO();
 
 $contas = $objDAO->ConsultarConta();
 
-
 ?>
 
 <!DOCTYPE html>

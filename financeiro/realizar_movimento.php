@@ -126,7 +126,6 @@ include_once '_head.php';
         </div>
         <!-- /. PAGE WRAPPER  -->
     </div>
-
 </body>
 
 </html>

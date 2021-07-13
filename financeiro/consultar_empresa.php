@@ -79,5 +79,4 @@ include_once '_head.php';
     </div>
 
 </body>
-
 </html>

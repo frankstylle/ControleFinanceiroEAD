@@ -50,5 +50,6 @@ if (isset($ret)) {
         echo '<div class="alert alert-danger">
                 Usuário não encontrado!
               </div>';
+              
     }
 }

@@ -5,7 +5,6 @@ require_once '../DAO/UtilDAO.php';
 if(isset($_GET['close']) && $_GET['close'] == 1){
     UtilDAO::Deslogar();
 }
-
 ?>
 
 <nav class="navbar-default navbar-side" role="navigation">

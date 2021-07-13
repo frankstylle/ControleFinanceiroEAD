@@ -21,4 +21,5 @@
     <!-- CUSTOM SCRIPTS -->
     <script src="assets/js/custom.js"></script>
     <script src="assets/js/validarCampos.js"></script>
+    
 </head>

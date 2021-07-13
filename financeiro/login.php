@@ -49,7 +49,6 @@ include_once '_head.php';
                                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
                                 <input type="password" class="form-control" placeholder="Sua senha" name="senha" id="senha" maxlength="12"  />
                             </div>
-
                             <button class="btn btn-primary " name="btnAcessar" onclick="return ValidarLogin()">Acessar</button>
                             <hr />
                             Caso não tenha cadastro, <a href="cadastro.php">Clique aqui! </a>

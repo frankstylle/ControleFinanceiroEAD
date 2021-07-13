@@ -22,7 +22,6 @@ include_once '_head.php';
         include_once '_menu.php';
         ?>
         <!-- /. NAV TOP  -->
-
         <!-- /. NAV SIDE  -->
         <div id="page-wrapper">
             <div id="page-inner">
