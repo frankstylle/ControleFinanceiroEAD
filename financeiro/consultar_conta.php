@@ -62,7 +62,7 @@ include_once '_head.php';
                                             <td><?= $conta['banco_conta'] ?></td>
                                             <td><?= $conta['agencia_conta'] ?></td>
                                             <td><?= $conta['numero_conta'] ?></td>
-                                            <td><?= $conta['saldo_conta'] ?></td>
+                                            <td>R$ <?= number_format($conta['saldo_conta'], 2, ',', '.') ?> </td>
                                             <td>
                                                 <a href="alterar_conta.php?cod=<?= $conta['id_conta'] ?>" class="btn btn-warning btn-sm">Alterar</a>
                                             </td>

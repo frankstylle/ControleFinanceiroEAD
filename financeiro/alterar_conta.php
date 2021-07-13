@@ -76,7 +76,7 @@ include_once '_head.php';
                     </div>
                     <div class="form-group" id="divSaldo">
                         <label>Saldo*</label>
-                        <input class="form-control" name="saldo" placeholder="Digite o saldo da conta..." id="saldo" value="<?= $conta[0]['saldo_conta'] ?>" maxlength="10" />
+                        <input class="form-control" type="number" step="0.01" min="0.01" name="saldo" placeholder="Digite o saldo da conta..." id="saldo" value="<?= $conta[0]['saldo_conta'] ?>" maxlength="10" />
                     </div>
                     <button type="submit" name="btnSalvar" class="btn btn-success" onclick="return ValidarConta()">Salvar</button>
                     <button type="button" data-toggle="modal" data-target="#modalExcluir" class="btn btn-danger" >Excluir</button>

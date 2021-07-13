@@ -47,11 +47,11 @@ include_once '_head.php';
                 <form action="meus_dados.php" method="post">
                     <div class="form-group" id="divNome">
                         <label>Nome</label>
-                        <input class="form-control" placeholder="Digite seu nome..." name="nome" id="nome" value="<?= $dados[0]['nome_usuario'] ?>" />
+                        <input class="form-control" placeholder="Digite seu nome..." name="nome" id="nome" value="<?= $dados[0]['nome_usuario'] ?>" maxlength="50"  />
                     </div>
                     <div class="form-group" id="divEmail">
                         <label>E-mail</label>
-                        <input class="form-control" placeholder="Digite seu e-mail..." name="email" id="email" value="<?= $dados[0]['email_usuario'] ?>" />
+                        <input class="form-control" placeholder="Digite seu e-mail..." name="email" id="email" value="<?= $dados[0]['email_usuario'] ?>" maxlength="50"  />
                     </div>
                     <button type="submit" class="btn btn-success" name="btnGravar" onclick="return ValidarMeusDados()">Gravar</button>
                 </form>

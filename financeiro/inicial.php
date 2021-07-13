@@ -30,8 +30,8 @@ include_once '_head.php';
                 <div class="row">
                     <div class="col-md-12">
                         <?php include_once '_msg.php'; ?>
-                        <h2>Página Inicial</h2>
-                        <h5>Aqui você acompanha todos os números de uma forma geral </h5>
+                        <h2>Bem Vindo ao seu Radar Financeiro</h2>
+                        <h5>Comece agora a controlar seu dinheiro e mude sua Vida</h5>
 
                     </div>
                 </div>

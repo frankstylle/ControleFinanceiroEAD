@@ -47,20 +47,20 @@ include_once '_head.php';
                             <br />
                             <div class="form-group input-group" id="divNome">
                                 <span class="input-group-addon"><i class="fa fa-circle-o-notch"></i></span>
-                                <input type="text" class="form-control" placeholder="Seu nome" name="nome" id="nome" />
+                                <input type="text" class="form-control" placeholder="Seu nome" name="nome" id="nome" maxlength="50"  />
                             </div>
                            
                             <div class="form-group input-group" id="divEmail">
                                 <span class="input-group-addon">@</span>
-                                <input type="text" class="form-control" placeholder="Seu e-mail" name="email" id="email" />
+                                <input type="email" class="form-control" placeholder="Seu e-mail" name="email" id="email" maxlength="50"  />
                             </div>
                             <div class="form-group input-group" id="divSenha">
                                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                <input type="password" class="form-control" placeholder="Crie uma senha (mínimo 6 caracteres)" name="senha" id="senha" />
+                                <input type="password" class="form-control" placeholder="Crie uma senha (mínimo 6 caracteres)" name="senha" id="senha" maxlength="12"  />
                             </div>
                             <div class="form-group input-group" id="divRsenha">
                                 <span class="input-group-addon"><i class="fa fa-lock"></i></span>
-                                <input type="password" class="form-control" placeholder="Repita a senha criada" name="rsenha" id="rsenha" />
+                                <input type="password" class="form-control" placeholder="Repita a senha criada" name="rsenha" id="rsenha" maxlength="12"  />
                             </div>
 
                             <button class="btn btn-success " name="btnFinalizar" onclick="return ValidarCadastro()">Finalizar cadastro</button>

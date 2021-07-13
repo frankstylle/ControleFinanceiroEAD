@@ -57,7 +57,7 @@ include_once '_head.php';
                     </div>
                     <div class="form-group" id="divSaldo">
                         <label>Saldo*</label>
-                        <input class="form-control" placeholder="Digite o saldo da conta..." name="saldo" id="saldo" maxlength="10" />
+                        <input class="form-control"  type="number" step="0.01" min="0.01" placeholder="Digite o saldo da conta..." name="saldo" id="saldo" maxlength="10" />
                     </div>
                     <button type="submit" class="btn btn-success" name="btnGravar" onclick="return ValidarConta()">Gravar</button>
                 </form>

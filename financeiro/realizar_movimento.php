@@ -77,7 +77,7 @@ include_once '_head.php';
                         </div>
                         <div class="form-group" id="divValor">
                             <label>Valor*</label>
-                            <input type="text" class="form-control" placeholder="Digite o valor do movimento" name="valor" id="valor" maxlength="10" />
+                            <input type="number" step="0.01" min="0.01" class="form-control" placeholder="Digite o valor do movimento" name="valor" id="valor" maxlength="10" />
                         </div>
                     </div>
 

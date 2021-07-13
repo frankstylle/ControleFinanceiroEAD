@@ -11,10 +11,10 @@ require_once '../DAO/UtilDAO.php';
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="index.html">Financeiro</a>
+        <a class="navbar-brand" href="inicial.php">Financeiro</a>
     </div>
     <div style="color: white;
 padding: 15px 50px 5px 50px;
 float: right;
-font-size: 16px;">Olá, <?= UtilDAO::NomeLogado() ?>. Dúvidas lique para:  (00) 0000-0000 </div>
+font-size: 16px;">Olá, <?= UtilDAO::NomeLogado() ?>. Dúvidas mande um E-mail para: pdv.franksilva@gmail.com </div>
 </nav>
